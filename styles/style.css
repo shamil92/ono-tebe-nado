@@ -7,6 +7,11 @@
   grid-template-columns: 2fr 1fr 2fr;
 }
 
+.header__menu {
+  display: flex;
+  align-items: center;
+}
+
 .header__links-list {
   display: flex;
   align-items: center;
@@ -19,7 +24,7 @@
 .header__links-list-item {
   width: 100%;
   text-decoration: underline;
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   line-height: normal;
   font-size: 18px;
   font-style: normal;
@@ -33,8 +38,9 @@
   list-style: none;
 }
 
-a {
-  text-underline-offset: 4px;
+.address {
+  flex-direction: column;
+  list-style-type: none;
 }
 
 .header_right_menu {
@@ -54,11 +60,15 @@ a {
   height: 105px;
 }
 
+a {
+  text-underline-offset: 4px;
+}
+
 .info-list {
   list-style: none;
   width: 100%;
   color: #000;
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -66,13 +76,14 @@ a {
 }
 
 .cover {
-  height: 757px;
+  height: 100%;
   width: 100%;
   background-image: url("../images/cover.jpg");
   display: block;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat;
+  padding: 0px;
 }
 
 .overlay {
@@ -84,16 +95,11 @@ a {
   background: #000;
 }
 
-.address {
-  flex-direction: column;
-  list-style-type: none;
-}
-
 .cover_title {
   display: grid;
   flex-direction: column;
   gap: 15px;
-  font-family: 'Raleway';
+  font-family: Raleway, Arial, sans-serif;
   padding: 165px 0px 0px 24px;
   font-style: normal;
   font-size: 100px;
@@ -115,6 +121,7 @@ a {
   z-index: 4;
   display: block;
   position: relative;
+  align-items: flex-start;
   line-height: 100%;
   padding-left: 30px;
   text-align: center;
@@ -134,20 +141,20 @@ a {
 .cover__description {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   width: 100%;
-  height: 52px;
-  padding-left: 110px;
-  padding-right: 24px;
-  padding-top: 150px;
+  height: 100%;
+  padding-right: 21px;
+  padding-top: 123px;
+  padding-bottom: 52px;
+  gap: 86px;
 }
 
 .cover__description-text {
   color: #FFF;
   text-align: center;
-  font-family: Raleway;
-  width: 633px;
-  height: 28px;
+  font-family: Raleway, Arial, sans-serif;
+  height: 100%;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
@@ -162,13 +169,13 @@ a {
   width: 257px;
   color: #FFF;
   text-align: center;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
-  display: transparent;
+  display: block;
   position: relative;
   background-color: transparent;
   border-color: white;
@@ -187,12 +194,14 @@ a {
 .lots__card-list {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  gap: 25px;
+  justify-content: flex-start;
 }
 
 .lots__heading {
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
+  ;
   font-size: 40px;
   font-style: normal;
   font-weight: 700;
@@ -206,31 +215,34 @@ a {
   display: flex;
   width: 334px;
   height: 600px;
-
+  flex-grow: 1;
 }
 
-.card_type_film {
-  background-image: url(../images/card-lot-01.png);
+.card {
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+.card_type_film {
+  background-image: url(../images/card-lot-01.png);
+}
+
 .card_type_book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-repeat: round;
 }
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-repeat: round;
 }
 
 .card {
-  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   display: flex;
+  gap: 10px;
   position: relative;
   flex-direction: column;
   justify-content: space-between;
@@ -238,7 +250,7 @@ a {
 
 .card__title {
   color: #FFF;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 700;
@@ -246,27 +258,22 @@ a {
   position: relative;
   text-decoration-line: underline;
   text-transform: uppercase;
-  padding-top: 50px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .card__text {
   color: #FFF;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  padding-left: 40px;
   position: relative;
-  padding-right: 40px;
-  padding-bottom: 50px;
 }
 
 .lots__look-more-link {
   color: #000;
-  font-family: Raleway;
+  font-family: Raleway, Arial, sans-serif;
+  max-width: fit-content;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -278,15 +285,12 @@ a {
 
 .about {
   width: 100%;
-  height: 596px;
-  padding-left: 24px;
-  padding-right: 24px;
+  height: 100%;
   margin-top: 181px;
   display: grid;
   grid-template-columns: 430px auto;
   gap: 25px;
 }
-
 
 .about__column {
   display: flex;
@@ -310,8 +314,8 @@ a {
 
 .about__column-text {
   flex-direction: column;
-  gap: 100px;
-  padding-top: 100px;
+  gap: 93px;
+  padding-top: 103px;
 }
 
 .about__title {
@@ -326,36 +330,42 @@ a {
   gap: 28px;
 }
 
+.about__texts {
+  font-weight: 400;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+}
 
 .footer_left_adress {
   display: grid;
   align-items: center;
   justify-content: flex-start;
+  line-height: 22px;
 }
 
 .footer_menu {
   list-style-type: none;
   list-style: none;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   display: flex;
-}
-
-.about__texts {
-  font-weight: 400;
-  line-height: normal;
-  font-size: 20px;
-  font-weight: 400;
-  font-family: Raleway;
-  font-size: 20px;
+  color: #000;
+  text-align: center;
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 18px;
   font-style: normal;
+  font-weight: 400;
 }
 
 .footer {
   display: grid;
   grid-template-columns: 240px 150px 240px;
   justify-content: space-between;
-  margin-top: 181px;
+  margin-top: 175px;
   padding-bottom: 90px;
   padding-left: 24px;
   padding-right: 24px;
